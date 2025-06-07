@@ -1,5 +1,5 @@
+import { Movies } from "./components/Movies";
+
 export const App = () => {
-  return (
-    <h1>Movies</h1>
-  )
-}
+  return <Movies />;
+};
