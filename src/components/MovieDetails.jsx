@@ -46,11 +46,11 @@ export const MovieDetails = () => {
           />
 
           <div className="details">
-            <h2>
-              <span className="title">{movieDetails.title+" "}</span>
+            <h2 className="title">
+              <span>{movieDetails.title+" "}</span>
               <div className="rating"> ⭐️{movieDetails.vote_average} </div>
             </h2>
-            <p>{movieDetails.overview}</p>
+            <p className="overview">{movieDetails.overview}</p>
           </div>
         </div>
       </div>
