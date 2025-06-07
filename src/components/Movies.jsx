@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import { MovieCard } from "./MovieCard";
 
+import "./Movies.css";
+
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -20,10 +22,10 @@ export const Movies = () => {
   }
 
   return (
-    <>
+    <div className="cardList">
       {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
-    </>
+    </div>
   );
 };
