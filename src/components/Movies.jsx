@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MovieDetails } from "./MovieDetails";
+import { Link } from "react-router";
 
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -20,14 +20,13 @@ export const Movies = () => {
 
   return (
     <>
-      <ol>
-        {movies.map((movie) => (
-          <li key={movie.id}>
+      {movies.map((movie) => (
+        <Link key={movie.id} to={`/movies/${movie.id}`}>
+          <p>
             {movie.title}, released: {movie.release_date}
-          </li>
-        ))}
-      </ol>
-      <MovieDetails movieId={movies[0].id} />
+          </p>
+        </Link>
+      ))}
     </>
   );
 };
