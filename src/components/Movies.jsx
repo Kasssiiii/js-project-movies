@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+
+import { MovieCard } from "./MovieCard";
 
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -21,11 +22,7 @@ export const Movies = () => {
   return (
     <>
       {movies.map((movie) => (
-        <Link key={movie.id} to={`/movies/${movie.id}`}>
-          <p>
-            {movie.title}, released: {movie.release_date}
-          </p>
-        </Link>
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </>
   );
