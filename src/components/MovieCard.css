@@ -1,0 +1,57 @@
+.card {
+  position: relative;
+  width: 100%;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.mainImage {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+
+.info:hover {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.info h1 {
+  font-size: 2rem;
+}
+
+.info p {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+@media all and (min-width: 668px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .card {
+    width: 25%;
+  }
+}
