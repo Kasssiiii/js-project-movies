@@ -1,3 +1,3 @@
 # Movies
 
-https://gilded-cobbler-dc6fff.netlify.app/
+https://movies-js-kasia.netlify.app/
